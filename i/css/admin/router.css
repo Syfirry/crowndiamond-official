@@ -1,0 +1,25 @@
+input[class$="addressfielderr"]::-webkit-input-placeholder{
+     color:red;
+     opacity: 0.5;
+}
+input[class$="addressfielderr"]:-ms-input-placeholder{
+     color:red;
+     opacity: 0.5;
+}
+input[class$="addressfielderr"]:-moz-placeholder{
+     color:red;
+     opacity: 0.5;
+}
+input[class$="addressfielderr"]::-moz-placeholder{
+     color:red;
+     opacity: 0.5;
+}
+
+tr.router_cur_pos{color:#f00;}
+a.disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.6;
+        color: #e3e3e3;
+    }
+td.reached{font-weight:bolder;color:#f00}

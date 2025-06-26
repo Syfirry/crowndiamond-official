@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crown Diamond Wellness Center</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/animate.css">
+    
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/owl.carousel.min.css">
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/magnific-popup.css">
+
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/aos.css">
+
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/ionicons.min.css">
+
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/jquery.timepicker.css">
+
+    
+    <!--<link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/flaticon.css">-->
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/icomoon.css">
+    <link rel="stylesheet" href="<{$APP_PATH}>/i/css/frontend/crowndiamond/style.css">
+      
+    <script type="text/javascript">
+ 
+    </script>
+    
+  </head>
+  <body>
+    <!-- Start of Nav -->
+    <{include file="frontend/default/lib/nav.html"}>
+    <!-- END nav -->
+
+    <section id="home" class="video-hero js-fullheight" style="display: block;" data-section="home">
+      <div class="video-hero js-fullheight" style="height: 500px; position: absolute; background-image: url(<{$APP_PATH}>/i/images/store_bg.jpg); z-index: -10; background-size:cover; background-position: center center;"></div>
+			<div class="overlay js-fullheight"></div>
+			<a class="player" data-property="{videoURL:'#',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:false, startAt:0, opacity:1, quality:'default'}"></a>
+			<div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-10 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" style="font-size:30px;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CROWN DIAMOND WELLNESS CENTER<br />RATES</h1>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="" class="btn btn-primary btn-outline-white px-4 py-3" style="display:none;">Details</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-2">
+        <div class="container-fluid">
+          <div class="section-2-blocks-wrapper d-flex row no-gutters">
+            <div class="col-md-12 ftco-animate" style="padding: 15px 20px;">
+              <h3 style="color:black;"><b>Services</b></h3>
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">#</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Practitioners</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <{foreach $rates as $rate}>
+                      <tr>
+                        <th></th>
+                        <th scope="row"><{$rate.index}></th>
+                        <td><{$rate['description'] nofilter}></td>
+                        <td><{$rate['rate'] nofilter}></td>
+                        <td><{$rate.remark}></td>
+                      </tr>
+                      <{/foreach}>
+                    </tbody>
+                  </table>
+                  <h3 style="color:black;"><b>Add-ons</b></h3>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">#</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <{foreach $addons as $addon}>
+                      <tr>
+                        <th></th>
+                        <th scope="row"><{$addon.index}></th>
+                        <td><{$addon.description}></td>
+                        <td><{$addon['rate'] nofilter}></td>
+                      </tr>
+                      <{/foreach}>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center" style="padding: 1.5em 0;">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2 style="font-size:25px;">HAVE ANY QUESTIONS?</h2>
+              <p>WE ARE HAPPY TO ANSWER ANY QUESTIONS YOU MAY HAVE!</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-6">
+                  <h2 style="color:white;">(604) 553-7160</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+   
+    <{include file="frontend/default/lib/footer.html"}>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/popper.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/bootstrap.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.easing.1.3.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.waypoints.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.stellar.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/owl.carousel.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.magnific-popup.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/aos.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.animateNumber.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/bootstrap-datepicker.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.timepicker.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/jquery.mb.YTPlayer.min.js"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/scrollax.min.js"></script>
+<!--
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/google-map.js"></script>
+-->
+  <script src="<{$APP_PATH}>/i/js/frontend/crowndiamond/main.js"></script>
+    
+  </body>
+</html>
